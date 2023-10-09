@@ -1,0 +1,445 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar-costum{
+    width:70%;
+    margin: auto;
+}
+
+.back-image{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODMiIGhlaWdodD0iNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNzAuMjY0LjE1MmMuMDkzLjE0NS4xNzYuMjk0LjI1LjQ0OS4wMzYuMTI2LjA2LjI1NS4wNzIuMzg1bC0uMjk2LjI3Yy0zLjQyLS4xNC02Ljg3LS4xNDgtMTAuMzItLjEwNi0zLjQ0OC4wNDItNi44OTIuMDgyLTEwLjMzNy4yOTEuMTgzLjAwOC4zNjYuMDE3LjU1LjAyMyAyLjk0NC4wODggNS44ODguMTY5IDguODMyLjI2NiAxLjE4Mi4wMzkgMi4zNjEuMTE3IDMuNTQzLjE3MiAyLjY4OS4xMjUgNS4zOC4yMzMgOC4wNjkuMzcyIDIuMTM1LjExIDQuMjY4LjI1IDYuNDAxLjM4OCAxLjI4LjA4MiAyLjU1Ny4xOCAzLjgzNC4yNzYuMjc1LjAyLjU0Ny4wNi44NDQuMDkzLjA0NC4xMjQuMTEuMjQuMTk3LjM0NC4xNjMuMTQzLjA4NS4yODIuMDQ3LjQyM2EyLjY0NiAyLjY0NiAwIDAxLS4xNTcuMzU4Yy0uMjI4LS4wMDktLjQyNy0uMDExLS42MjQtLjAyNWwtMy45ODQtLjI4NWEyLjEzIDIuMTMgMCAwMC0uNTI2LS4wMTMgNy42OTUgNy42OTUgMCAwMS0xLjgwMy4wMTZjLTIuOTE5LS4xMi01Ljg0MS0uMTU2LTguNzY0LS4xNzctMi44NDctLjAyLTUuNjkzLS4wNjYtOC41NC0uMDYyLTMuMzUuMDA0LTYuNy4wNDQtMTAuMDQ5LjA3Ny0yLjAxNC4wMi00LjAzLjA0NS02LjA0NC4wODgtMS42MS4wMzUtMy4yMi4wOTItNC44My4xNTMtMi42NjcuMS01LjMzMi4yMDctNy45OTguMzItMS44MzYuMDc3LTMuNjcyLjE1Ny01LjUwNC4yNTQtMS41MDcuMDc5LTMuMDE0LjE4NC00LjUxOC4yNzYtLjkyOS4wNTctMS44NTguMTAzLTIuNzg2LjE2Ny0xLjc1NS4xMjMtMy41MS4yNTEtNS4yNjMuMzg0YTE3MS43OSAxNzEuNzkgMCAwMC0zLjM3NS4yODJjLS44MjMuMDU0LTEuNjQuMTcyLTIuNDQyLjM1Mi0uNDEuMTA2LS42MjgtLjAxOC0uNjMzLS4zMzUgMC0uMDkzLjAxOC0uMTg2LjAyLS4yOCAwLS4wNzMtLjAwNy0uMTQ2LS4wMTQtLjI1My0uMjE0LjAxNS0uNDA1LjAzLS41OTYuMDQxLS4xNS4wMTQtLjMwMi4wMi0uNDUzLjAxOS0uNDY3LS4wMTYtLjU4Ny0uMTAzLS42NzctLjQ2OGwtLjA1Ny0uMjJhNS4yMDIgNS4yMDIgMCAwMC0xLjA3LjA3N2MtLjE5OC4wMy0uMzkyLjA3NC0uNTkuMDk2LS4zMzQuMDQtLjU0Ni0uMDYzLS42MDYtLjNhMy44OSAzLjg5IDAgMDEtLjA2MS0uNDU4Yy4yOTctLjE1My42MjUtLjI1Ljk2NC0uMjgzYTM1LjY0NiAzNS42NDYgMCAwMTMuODYyLS41MjIgODg2LjEyMiA4ODYuMTIyIDAgMDExMC45MDEtLjc5NWMxLjM4LS4wOTEgMi43Ni0uMTcxIDQuMTM5LS4yNjQgMS45MDYtLjEyOCAzLjgxLS4yNjQgNS43MTUtLjM5NiAxLjMwNS0uMDkgMi42MDktLjE4MiAzLjkxMy0uMjczIDIuNDMyLS4xNyA0Ljg2NC0uMzQ3IDcuMjk3LS41MTIuOTc3LS4wNjYgMS45NTgtLjEwNiAyLjkzOC0uMTYyQzQwLjk0LjYwOCA0Mi4xNDQuNTI1IDQzLjM1LjQ3YzIuMDEyLS4wOTIgNC4wMjQtLjE2NSA2LjAzNi0uMjVDNTMuNjY0LjA0NCA1Ny45NDQgMCA2Mi4yMy4wMDNjMS42NjIgMCAzLjMyNS4wMTMgNC45ODcuMDQuOTk4LjAxNSAyLjAwMy4wNyAzLjA0OC4xMXpNMTkuMDA2IDMuMTg3Yy43MTQuMDY0IDcuOTAzLS4xODggOC44MjgtLjI4LjAzNi0uMDA0LjA2Ni0uMDQuMDk5LS4wNjItLjAwOC0uMTU0LS4xMTctLjI0OS0uMzI0LS4yNDZhMTcuNjcgMTcuNjcgMCAwMC0xLjA1NS4wNGMtMS4yNTMuMDg3LTIuNTA0LjE4My0zLjc1Ni4yNzVsLTMuNzkyLjI3M3oiIGZpbGw9IiNGOTQ5NjIiLz48L3N2Zz4=);
+    background-size: 83px 6px; 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    color: #1F883D;
+    /* height: 6px; 
+    width: 83px;  */
+}
+
+.button-link{
+    color: black;
+    font-family: sans-serif;
+}
+
+.button-link:hover{
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    width: 60%;
+    margin: auto;
+    
+}
+
+
+.upper{
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+    color: #02073E;
+    font-weight:bold;
+}
+
+.lower{
+    display: flex;
+    justify-content: center;
+    font-size: 150%;
+    color: #02073E;
+    font-weight: bold;
+    padding: 13px 0px;
+}
+
+.top-header{
+    width: 60%;
+    margin-top: 4%;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.service-button{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-success{
+    background-color: #0A8080;
+}
+
+.started-image{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.bottom-header{
+    width: 80%;
+    margin: auto;
+}
+
+.bottom-header img{
+    width: 80%;
+    height: 25rem;
+}
+
+/* HARD START */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0px;
+  background-color: #FFF5ED;
+}
+
+.first-div {
+  margin: 20px 0;
+}
+
+.secd{
+  width: 100% ;
+}
+
+.second-div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin:20px auto;
+}
+
+.image-section{
+  width: 100%;
+  display: flex;
+  margin-right: 3%;    
+}
+
+.image-section img{
+  width: 88px;
+  height: 88px;
+  margin-right: 20px;
+}
+
+.second-div div {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+.quote-div {
+  margin: 20px 0;
+}
+
+.quote {
+  font-weight: bold;
+}
+
+.company-logos{
+  width: 90%;
+  display:flex;
+  justify-content: space-around;
+  padding: 3%;
+}
+
+.some-otherpart h2{
+  width: 265px;
+  height: 30px;
+  top: 1378px;
+  left: 481px;
+  text-align: left;
+
+}
+
+.some-otherpart p{
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+
+}
+
+
+
+
+
+
+/* HARD END */
+
+/* .main-header{
+    background-color: #FFF5ED;
+    ;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5px;
+
+
+} */
+
+.description{
+    padding-top: 3.5%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+    
+}
+
+.description img{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.quote{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* CHECK STYLE */
+
+.services-container{
+    width: 90%;
+    margin: auto;
+    
+}
+
+.top-section {
+    /* background-color: #f0f0f0; */
+    text-align: center;
+    padding: 40px 0;
+    padding:5% 0;
+}
+
+.centered-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.service {
+    text-align: center;
+    margin: 20px;
+    max-width: 300px;
+}
+
+.service img {
+    width: 50px;
+    height: 50px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+
+
+/* another css chcek */
+
+.subscribe-section {
+    position: relative;
+    width: 100%;
+    background: #FFF5ED;
+    ;
+  }
+.subscribe-section img{
+    width: 100%;
+}
+  
+  .subscribe-box {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .subscribe-content {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .email-input {
+    margin-bottom: 10px;
+  }
+  
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscribe-message {
+    font-size: 12px;
+    color: #888;
+  }
+
+
+  /* FOOTER STYLES */
+  /* Reset some default styles */
+
+
+body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the footer */
+  footer {
+    /* background-color: #333;
+    color: white; */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Style the footer logo and text */
+  .footer-logo img {
+    max-width: 100px;
+   
+  }
+  
+  /* Style footer sections */
+  .footer-section {
+    margin-top: 20px;
+   
+  }
+  
+  /* Style footer section headings */
+  .footer-section h3 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Style footer links */
+  .footer-section ul {
+    list-style: none;
+    align-items: center;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color:#02073E;
+    
+  }
+  
+  /* Style social media icons */
+  .footer-section ul li img{
+    width: 20px;
+    height: 20px;
+    
+  }
+
+
+  .br-content{
+    padding-left: 10px;
+  }
+
+  .modified ul li{
+    display: flex;
+    justify-content: left;
+    padding-top: 9px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .title{
+      width: 100%;
+    }
+    .upper{
+      display: flex;
+      justify-content: center;
+      font-size: 100%;
+      color: #02073E;
+      font-weight:bold;
+    }
+  
+  .lower{
+      display: flex;
+      justify-content: center;
+      font-size: 100%;
+      color: #02073E;
+      font-weight: bold;
+      padding: 13px 0px;
+  }
+
+ 
+  }
+
+
+
+
+
